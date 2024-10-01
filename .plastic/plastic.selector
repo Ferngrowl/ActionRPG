@@ -1,0 +1,4 @@
+repository "ActionRPG@Ferngrowl@cloud"
+  path "/"
+    br "/main"
+    co "/main"
