@@ -47,9 +47,21 @@ TagManager:
   - name: Ground
     uniqueID: 3737735929
     locked: 0
-  - name: World
+  - name: WalkInFront
+    uniqueID: 4140616277
+    locked: 0
+  - name: Collision
+    uniqueID: 2039322365
+    locked: 0
+  - name: Entity
     uniqueID: 72032833
     locked: 0
-  - name: Top
+  - name: WalkBehind
+    uniqueID: 2235190851
+    locked: 0
+  - name: Decoration
     uniqueID: 2661251113
+    locked: 0
+  - name: Sky
+    uniqueID: 395992117
     locked: 0
