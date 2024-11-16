@@ -17,8 +17,6 @@ public class RoomTransition : MonoBehaviour
     //location text vairables
     public bool needText; // dependant on whether or not the area being moved too is a different biome or location rather than a different room in the same place
     public string locationName;
-    public GameObject text;
-    public TextMeshProUGUI LocationText;
 
     void Start()
     {
@@ -36,19 +34,14 @@ public class RoomTransition : MonoBehaviour
             // Change the confiner collider to the new room's collider
             camConfiner.m_BoundingShape2D = newConfiner;
             camConfiner.InvalidatePathCache();  // Clears the cache for the new collider to take effect
+            
+            //If text is needed show location text for x seconds
             if (needText)
             {
-                StartCoroutine(locationNameCo());
+                LocationTextHandler.Instance.ShowLocation(locationName);
             }
 
         }
     }
 
-    private IEnumerator locationNameCo()
-    {
-        text.SetActive(true);
-        LocationText.text = locationName;
-        yield return new WaitForSeconds(4f);
-        text.SetActive(false);
-    }
 }
