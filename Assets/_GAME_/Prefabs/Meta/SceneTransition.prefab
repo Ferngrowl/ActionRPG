@@ -96,3 +96,5 @@ MonoBehaviour:
   fadeInPanel: {fileID: 2200688024463513806, guid: c5a00c6ed39d37246b08d0db84e566cc, type: 3}
   fadeOutPanel: {fileID: 3134651715218769332, guid: 93f6c8dbb1e203843908bab29cd00865, type: 3}
   fadeWait: 0.5
+  locationInfo: {fileID: 11400000, guid: ce5bc7253ef0a7240b9b0c8f31a06300, type: 2}
+  locationName: 

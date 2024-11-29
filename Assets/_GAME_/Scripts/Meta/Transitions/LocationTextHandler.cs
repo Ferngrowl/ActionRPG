@@ -1,44 +1,21 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using TMPro;
 
 public class LocationTextHandler : MonoBehaviour
 {
-    public static LocationTextHandler Instance { get; private set; }
     public TextMeshProUGUI locationText; // The TMP text component for displaying location
-
-    private string currentLocationName; // Current location name to be displayed
+    public LocationInfo locationInfo;   // Reference to the ScriptableObject
     private const float DefaultDisplayTime = 2f; // How long to display the location name
 
-    void Awake()
+    void Start()
     {
-        // Ensure there's only one instance of this script and it persists across scenes
-        if (Instance == null)
+        // Check if there's a location name in the ScriptableObject
+        if (!string.IsNullOrEmpty(locationInfo.locationName))
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-            SceneManager.sceneLoaded += OnSceneLoaded; // Listen for scene load events
+            ShowLocation(locationInfo.locationName); // Display it
+            locationInfo.Clear(); // Clear the location name after displaying
         }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    // Called when a scene is loaded
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        if (!string.IsNullOrEmpty(currentLocationName))
-        {
-            ShowLocation(currentLocationName); // Display location text if set
-        }
-    }
-
-    // Set location name and display time
-    public void SetLocation(string locationName)
-    {
-        currentLocationName = locationName;
     }
 
     // Show location text with fade in/out effect
@@ -76,12 +53,5 @@ public class LocationTextHandler : MonoBehaviour
 
         // Ensure text is fully transparent after fade-out
         locationText.color = new Color(locationText.color.r, locationText.color.g, locationText.color.b, 0);
-    }
-
-
-    void OnDestroy()
-    {
-        // Unsubscribe from the sceneLoaded event to avoid memory leaks
-        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }

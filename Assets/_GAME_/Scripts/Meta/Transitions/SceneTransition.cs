@@ -9,6 +9,7 @@ public class SceneTransition : MonoBehaviour
     public VectorValue playerPosMemory;
     public GameObject fadeInPanel, fadeOutPanel;
     public float fadeWait;
+    public LocationInfo locationInfo;
     public string locationName; // The name of the location for the new scene
 
     void Awake()
@@ -23,7 +24,7 @@ public class SceneTransition : MonoBehaviour
             playerPosMemory.initialValue = playerPosition;
 
             // Set location info in LocationTextHandler before transitioning
-            LocationTextHandler.Instance.SetLocation(locationName);
+            locationInfo.locationName = locationName;
             
             StartCoroutine(TransitionScene());
         }

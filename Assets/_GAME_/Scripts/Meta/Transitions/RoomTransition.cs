@@ -15,6 +15,7 @@ public class RoomTransition : MonoBehaviour
     private CinemachineConfiner camConfiner; 
 
     //location text vairables
+    private LocationTextHandler locationTextHandler;
     public bool needText; // dependant on whether or not the area being moved too is a different biome or location rather than a different room in the same place
     public string locationName;
 
@@ -22,6 +23,7 @@ public class RoomTransition : MonoBehaviour
     {
         cam = FindObjectOfType<CinemachineVirtualCamera>();
         camConfiner = cam.GetComponent<CinemachineConfiner>();
+        locationTextHandler = FindObjectOfType<LocationTextHandler>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -38,7 +40,7 @@ public class RoomTransition : MonoBehaviour
             //If text is needed show location text for x seconds
             if (needText)
             {
-                LocationTextHandler.Instance.ShowLocation(locationName);
+                locationTextHandler.ShowLocation(locationName);
             }
 
         }
