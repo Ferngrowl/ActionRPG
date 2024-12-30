@@ -11,7 +11,7 @@ public class Sign : MonoBehaviour
     
     
     private int characterLimit = 100; // Maximum number of characters per page
-    private float typewriterSpeed = 0.1f; // Speed for typewriter effect
+    private float typewriterSpeed = 0.005f; // Speed for typewriter effect
     private List<string> dialoguePages = new List<string>(); // Holds split dialogue pages
     private int currentPageIndex = 0; // Tracks the current page
     private bool showDialogue = false; // Tracks if player is in range
