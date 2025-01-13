@@ -58,25 +58,32 @@ public class DialogueObject : MonoBehaviour
         }
     }
 
-    private void PrepareDialogue(string fullDialogue)
+     private void PrepareDialogue(string fullDialogue)
     {
         dialoguePages.Clear();
-        
-        while (fullDialogue.Length > 0)
+
+        // Split by delimiter first
+        string[] chunks = fullDialogue.Split('|');
+        foreach (string chunk in chunks)
         {
-            int length = Mathf.Min(characterLimit, fullDialogue.Length);
-            string chunk = fullDialogue.Substring(0, length);
+            string remainingText = chunk.Trim();
 
-            // Avoid splitting words mid-way
-            int lastSpace = chunk.LastIndexOf(' ');
-            if (lastSpace > 0 && length < fullDialogue.Length)
+            while (remainingText.Length > 0)
             {
-                chunk = fullDialogue.Substring(0, lastSpace);
-                length = lastSpace + 1; // Include the space
-            }
+                int length = Mathf.Min(characterLimit, remainingText.Length);
+                string pageChunk = remainingText.Substring(0, length);
 
-            dialoguePages.Add(chunk.Trim());
-            fullDialogue = fullDialogue.Substring(length).TrimStart();
+                // Avoid splitting words mid-way
+                int lastSpace = pageChunk.LastIndexOf(' ');
+                if (lastSpace > 0 && length < remainingText.Length)
+                {
+                    pageChunk = remainingText.Substring(0, lastSpace);
+                    length = lastSpace + 1; // Include the space
+                }
+
+                dialoguePages.Add(pageChunk.Trim());
+                remainingText = remainingText.Substring(length).TrimStart();
+            }
         }
     }
 

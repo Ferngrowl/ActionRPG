@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae1af75773e3ae24180cf9eae10900bc, type: 3}
   m_Name: test
   m_EditorClassIdentifier: 
-  dialogueText: Hello yes I have a quest. A quest, that is, perchance for you, would
-    you kindly accept it blindly?
+  dialogueText: Hello there adventurer! I have a really, really, super important
+    quest for you. This quest could destroy you, break your very soul and you shall
+    never return the same, if you are ever to return at all! If you are willing,
+    what say you?!
   options:
   - Of course!
   - No way, weirdo!
   nextNodes:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 8e87a715a046a27499d03fa4fb0902b5, type: 2}
+  - {fileID: 11400000, guid: baf3cb842b5981549bb27be62c80d181, type: 2}

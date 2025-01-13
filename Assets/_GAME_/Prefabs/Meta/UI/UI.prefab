@@ -167,8 +167,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 275, y: 200}
+  m_SizeDelta: {x: 300, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6890988050295460907
 MonoBehaviour:
@@ -366,7 +366,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.0009862488, y: 15.765381}
+  m_AnchoredPosition: {x: 0, y: 15}
   m_SizeDelta: {x: 1000, y: 200}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &8696316656566240831
@@ -540,5 +540,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 5198522895288326780}
   dialogueText: {fileID: 444222689301779230}
-  optionsContainer: {fileID: 0}
-  optionButtonPrefab: {fileID: 0}
+  optionsContainer: {fileID: 4459618326892435311}
+  optionButtonPrefab: {fileID: 4905611631291267627, guid: 9b18cd2523243ee4c9fa4d6b5c6cdabb, type: 3}

@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae1af75773e3ae24180cf9eae10900bc, type: 3}
-  m_Name: testb
+  m_Name: testa
   m_EditorClassIdentifier: 
-  dialogueText: Okay, screw you then you old sack of poopy...
+  dialogueText: Thank you for your kindness, you must go now, south to the village,
+    please tell my wife I have been turned into a sign... She will be so proud.
   options: []
   nextNodes: []

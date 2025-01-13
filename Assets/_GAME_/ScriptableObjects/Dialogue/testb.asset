@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae1af75773e3ae24180cf9eae10900bc, type: 3}
-  m_Name: testa
+  m_Name: testb
   m_EditorClassIdentifier: 
-  dialogueText: Thank you stranger for the favour!
+  dialogueText: Okay, well, leave me to my business then. Good day...
   options: []
   nextNodes: []
