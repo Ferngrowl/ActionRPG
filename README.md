@@ -1,2 +1,3 @@
 2D Top Down Unity Action RPG
-Developed as a means of testing and developing game design and implementation skills.
+Ongoing Unity project focused on creating reusable
+systems. This project serves as both a demo and a toolkit for future projects.
